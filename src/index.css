@@ -22,10 +22,20 @@
 .container{
     display: flex;
     gap: 10px;
-    padding: 20px;
+    padding: 10px;
     width: 200px;
     height:200px;
     border-radius: 10px;
     transition: all ease .5s;
+    align-items: center;
+    justify-content: center;
 
+}
+.container h2{
+    font-size: 20px;
+    
+}
+label{
+    font-size: 4vw;
+    font-weight: 600;
 }

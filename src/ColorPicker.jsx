@@ -11,8 +11,10 @@ function ColorPicker() {
     <div className='main'>
         <h1>color picker</h1>
         <div className="container" style={{backgroundColor:color}}>
+        <h2 style={{color:'#000'}}>Selected Color : {color}</h2>
         </div>
-            <h2 style={{color:'#000'}}>Selected Color : {color}</h2>
+         
+           <label htmlFor="">Select a Color :</label>
             <input type="color" value={color} name="" id=""  onChange={handleColorChange}/>
 
 
