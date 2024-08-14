@@ -1,9 +1,9 @@
 import React from 'react'
-import ColorPicker from './ColorPicker'
+import MyCopm from './MyCopm'
 function App() {
   return (
     <div>
-   <ColorPicker/>
+  <MyCopm/>
     </div>
   )
 }
