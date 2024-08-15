@@ -83,3 +83,9 @@ li{
 input{
     width: 100%;
 }
+@media ( width <=500px){
+
+    .todo-list{
+        width: 300px;
+    }
+}
