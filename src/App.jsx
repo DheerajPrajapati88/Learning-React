@@ -1,9 +1,9 @@
 import React from 'react'
-import MyCopm from './MyCopm'
+import TodoList from './TodoList'
 function App() {
   return (
     <div>
-  <MyCopm/>
+  <TodoList/>
     </div>
   )
 }
