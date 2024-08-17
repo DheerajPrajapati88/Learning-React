@@ -9,3 +9,8 @@ This is a basic To-Do List application built using React. The app allows users t
 - Delete Task: Remove a task from the list.
 - Move Task Up: Move a task higher in the list.
 - Move Task Down: Move a task lower in the list.
+
+# Project 2
+
+## Ditigal Clock
+This is a simple Digital clock webApp project build using react

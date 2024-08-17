@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { MdDelete } from "react-icons/md";
 import { FaArrowUp } from "react-icons/fa";
 import { FaArrowDown } from "react-icons/fa";
-
-
+import { MdEdit } from "react-icons/md";
 
 function TodoList() {
   const [tasks, setTask] = useState([
@@ -18,43 +17,42 @@ function TodoList() {
   }
 
   function addTask() {
-
-    if(newTask.trim()!==""){
-
-        
-            setTask(t=>[...t,newTask])
-            setNewTask('')
+    if (newTask.trim() !== "") {
+      setTask((t) => [...t, newTask]);
+      setNewTask("");
     }
   }
   function deleteTask(index) {
-  
-
-
-    setTask(tasks.filter((_,i)=>i!==index))
-
+    setTask(tasks.filter((_, i) => i !== index));
   }
   function moveTaskUp(index) {
+    if (index > 0) {
+      const updatedTasks = [...tasks];
 
-    if(index > 0){
-
-        const updatedTasks=[...tasks];
-
-        [updatedTasks[index],updatedTasks[index-1]]=[updatedTasks[index-1],updatedTasks[index]];
-        setTask(updatedTasks)
-
+      [updatedTasks[index], updatedTasks[index - 1]] = [
+        updatedTasks[index - 1],
+        updatedTasks[index],
+      ];
+      setTask(updatedTasks);
     }
   }
   function moveTaskDown(index) {
-    if(index  < tasks.length - 1 ){
+    if (index < tasks.length - 1) {
+      const updatedTasks = [...tasks];
 
-        const updatedTasks=[...tasks];
-
-        [updatedTasks[index+1],updatedTasks[index]]=[updatedTasks[index],updatedTasks[index+1]];
-        setTask(updatedTasks)
-
+      [updatedTasks[index + 1], updatedTasks[index]] = [
+        updatedTasks[index],
+        updatedTasks[index + 1],
+      ];
+      setTask(updatedTasks);
     }
   }
 
+// function editTask(index){
+
+
+
+// }
   return (
     <div className="todo-list">
       <h1>To-Do-List</h1>
@@ -76,14 +74,16 @@ function TodoList() {
           <li key={index}>
             <span className="text">{task}</span>
             <MdDelete className="btn" onClick={() => deleteTask(index)}>
-              Delete
+              
             </MdDelete>
             <FaArrowUp className="btn" onClick={() => moveTaskUp(index)}>
-              Up
+              
             </FaArrowUp>
             <FaArrowDown className="btn" onClick={() => moveTaskDown(index)}>
-              Down
+              
             </FaArrowDown>
+
+            {/* <MdEdit className="btn" onClick={()=>editTask(index)}></MdEdit> */}
           </li>
         ))}
       </ol>
