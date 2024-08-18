@@ -13,4 +13,4 @@ This is a basic To-Do List application built using React. The app allows users t
 # Project 2
 
 ## Ditigal Clock
-This is a simple Digital clock webApp project build using react
+- This is a simple Digital clock webApp project build using react
